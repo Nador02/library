@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Library</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/35e81cc69b.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="full">
+            <div class="header">
+                <h1>Library</h1>
+            </div>
+            <div></div>
+            <div class="books">
+                <table class="tab">
+                    <tr>
+                        <th class="title">Title</th>
+                        <th class="author">Author</th>
+                        <th class="pages"># Pages</th>
+                        <th class="read">Read Status</th>
+                        <th class="new">New Book</th>
+                    </tr>
+                    <tr>
+                        <td>The Stranger</td>
+                        <td>Albert Camus</td>
+                        <td>111</td>
+                        <td><i class="fas fa-check-square check"></i></td>
+                        <td><i class="fas fa-ban delete"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Jane Eyre</td>
+                        <td>Charlotte Bronte</td>
+                        <td>320</td>
+                        <td><i class="fas fa-times-circle x"></i></td>
+                        <td><i class="fas fa-ban delete"></i></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="popup">
+                <div class="top">
+                    <i class="fas fa-times exit"></i>
+                </div>
+                <div class="newt">Title:</div>
+                <input type="text" id="title" value="">
+                <div class="newa">Author:</div>
+                <input type="text" id="author" value="">
+                <div class="newp">Pages:</div>
+                <input type="text" id="pages" value="">
+                <button class="submit">Add Book</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
