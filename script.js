@@ -38,16 +38,26 @@ function addToLibrary(){
 
     let statusUpper = document.createElement("td");
     let statusInner = document.createElement("i");
-    console.log(books[x].readP);
     if(books[x].readP == false)
+    {
         statusInner.classList.add("fas","fa-times-circle","x");
+        span.appendChild(statusUpper);
+        statusUpper.appendChild(statusInner);
+        statusInner.setAttribute("id", x);
+    }
     else
+    {
         statusInner.classList.add("fas","fa-check-square","check");
-    span.appendChild(statusUpper);
-    statusUpper.appendChild(statusInner);
-    statusInner.setAttribute("id", x);
+        span.appendChild(statusUpper);
+        statusUpper.appendChild(statusInner);
+        statusInner.setAttribute("id", x);
+    }
+
     let xs = document.querySelectorAll(".x");
     xs.forEach(x => x.addEventListener("click", change));
+    let checks = document.querySelectorAll(".check");
+    checks.forEach(x => x.addEventListener("click", change));
+
 
     let delUpper = document.createElement("td");
     let delInner= document.createElement("i");
@@ -81,13 +91,13 @@ function change(){
     {
         this.classList.remove("fa-times-circle","x");
         this.classList.add("fa-check-square","check");
-        books[x].readP = true;
+        books[index].readP = true;
     }
     else
     {
         this.classList.add("fa-times-circle","x");
         this.classList.remove("fa-check-square","check");
-        books[x].readP = false;
+        books[index].readP = false;
     }
 }
 function remove(){
